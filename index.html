@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🏦</text></svg>"></link>
+    <link rel="stylesheet" href="style.css" />
+    <title>JSBankify</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <img
+        src="assets/login-screen.jpg"
+        alt="Login screen photo"
+        class="login-photo"
+      />
+      <form action="#" class="login-form">
+        <input
+          type="text"
+          class="login-form__input"
+          placeholder="Username"
+          id="username"
+        />
+        <input
+          type="text"
+          class="login-form__input"
+          placeholder="Secret"
+          id="secret"
+        />
+        <button class="btn" id="login">Login</button>
+      </form>
+    </div>
+
+    <main class="main main--hidden">
+      <nav class="main-nav">
+        <h3 class="main-nav__text">Hello enes</h3>
+        <div class="main-nav-timer-container">
+          Logged out after <span class="main-nav__timer"></span>
+        </div>
+        <button class="btn" id="logout">Logout</button>
+      </nav>
+      <nav class="app-container-nav">
+        <span class="app-container-nav__text">Current Balance</span>
+        <select class="app-container__sort" id="sort" name="sort">
+          <option value="method">Choose method</option>
+          <option value="date">Sort by Date</option>
+          <option value="amount">Sort By Amount</option>
+        </select>
+        <span class="app-container-nav__balance">$16.244</span>
+      </nav>
+      <div class="app-container">
+        <div class="transaction-container"></div>
+        <div class="transaction-forms">
+          <form action="#" class="transfer-form">
+            <input
+              type="text"
+              class="transfer-form__username"
+              placeholder="owner"
+            />
+            <input
+              type="number"
+              class="transfer-form__amount"
+              placeholder="amount"
+            />
+            <button class="btn" id="transfer">Send</button>
+          </form>
+          <form action="#" class="loan-form">
+            <input
+              type="number"
+              class="loan-form__amount"
+              placeholder="amount"
+            />
+            <button class="btn" id="loan">Request</button>
+          </form>
+          <form action="#" class="close-account">
+            <input
+              type="text"
+              class="close-account__username"
+              placeholder="username"
+            />
+            <input
+              type="text"
+              class="close-account__secret"
+              placeholder="secret"
+            />
+            <button class="btn" id="close">Close</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
